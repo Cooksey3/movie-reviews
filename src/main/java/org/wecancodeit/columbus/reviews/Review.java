@@ -1,6 +1,5 @@
 package org.wecancodeit.columbus.reviews;
 
-
 public class Review {
 
 	private Long reviewId;
@@ -24,5 +23,4 @@ public class Review {
 	public String getMovieSummary() {
 		return movieSummary;
 	}
-
 }

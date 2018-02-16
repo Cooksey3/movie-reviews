@@ -13,8 +13,7 @@
 
 	<ul th:each="review: ${reviews}">
 		<li><a th:href="@{/review(id=${review.reviewId})}"
-			th:text="${review.movieName}"></a> <span
-			th:text="|: ${review.movieName}|" /></li>
+			th:text="${review.movieName}"></a></li>
 	</ul>
 
 </body>

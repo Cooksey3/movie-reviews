@@ -35,5 +35,4 @@ public class ReviewRepository {
 	public Collection<Review> findAllReviews() {
 		return reviews.values();
 	}
-
 }

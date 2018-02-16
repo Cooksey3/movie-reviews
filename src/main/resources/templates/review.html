@@ -9,13 +9,13 @@
 <body>
 
 	<header>
-		<h1> Movie </h1>
+		<h1>Movie</h1>
 	</header>
 
 	<div th:each="review: ${reviews}">
-		<p th:text="${review.movieName}" />
-		<p th:text="${review.movieSummary}" />
-		<p th:text="${review.reviewId}" />
+		<p th:text="${review.reviewId}"></p>
+		<p th:text="${review.movieName}"></p>
+		<p th:text="${review.movieSummary}"></p>
 		<a href="http://localhost:8080/reviews">Back to home</a>
 	</div>
 
