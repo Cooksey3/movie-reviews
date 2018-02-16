@@ -4,9 +4,18 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.stereotype.Repository;
+
+@Repository
 public class ReviewRepository {
 
 	Map<Long, Review> reviews = new HashMap<>();
+	
+	public ReviewRepository() {
+		Review firstMovie = new Review(100L, "First movie", "Movie description");
+		
+		populateReviewMap(firstMovie);
+	}
 	
 	public ReviewRepository(Review... reviews) {
 		populateReviewMap(reviews);
