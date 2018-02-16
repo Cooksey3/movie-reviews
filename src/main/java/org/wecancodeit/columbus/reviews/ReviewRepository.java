@@ -23,7 +23,7 @@ public class ReviewRepository {
 		Review fifthMovie = new Review(400L, "Cube", "Movie description", "Review Category", "Content",
 				"/images/cube.jpg",
 				"A group of prisoners find themselves trapped in a large, "
-						+ "menacing cube and must work together to escape. Will they ever solve the cube out?",
+						+ "menacing cube and must work together to escape. Will they ever solve the cube?",
 				"Vincenzo Natali");
 
 		populateReviewMap(firstMovie, secondMovie, thirdMovie, fourthMovie, fifthMovie);
