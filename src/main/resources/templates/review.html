@@ -13,6 +13,7 @@
 	</header>
 
 	<div th:each="review: ${reviews}">
+		<img th:src="${review.image}" style="width: 304px; height: 228px"></img>
 		<p th:text="${review.reviewId}"></p>
 		<p th:text="${review.movieName}"></p>
 		<p th:text="${review.movieSummary}"></p>

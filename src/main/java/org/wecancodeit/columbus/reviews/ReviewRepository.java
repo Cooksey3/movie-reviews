@@ -10,22 +10,30 @@ import org.springframework.stereotype.Repository;
 public class ReviewRepository {
 
 	Map<Long, Review> reviews = new HashMap<>();
-	
+
 	public ReviewRepository() {
-		Review firstMovie = new Review(100L, "First movie", "Movie description");
+		Review secondMovie = new Review(121L, "John Wick", "Best. Movie. Ever.", "Review Category", "Content",
+				"/images/john-wick.jpg");
+		Review thirdMovie = new Review(432L, "Texas Chainsaw Massacre", "Strange ending...needs reworking.", "Review Category", "Content",
+				"/images/texas-chainsaw-massacre.jpg");
+		Review fourthMovie = new Review(223L, "Silence of the Lambs", "Movie description", "Review Category", "Content",
+				"/images/silence-of-the-lambs.jpg");
+		Review firstMovie = new Review(902L, "Identity", "Great thiller. Excellent ending.", "Review Category", "Content",
+				"/images/identity.jpg");
+		Review fifthMovie = new Review(400L, "Cube", "Movie description", "Review Category", "Content",
+				"/images/cube.jpg");
 		
-		populateReviewMap(firstMovie);
+		populateReviewMap(firstMovie, secondMovie, thirdMovie, fourthMovie, fifthMovie);
 	}
-	
+
 	public ReviewRepository(Review... reviews) {
 		populateReviewMap(reviews);
 	}
-	
+
 	public Review findReview(Long reviewId) {
 		return reviews.get(reviewId);
 	}
-	
-	
+
 	public void populateReviewMap(Review... reviews) {
 		for (Review review : reviews) {
 			this.reviews.put(review.getReviewId(), review);
