@@ -12,17 +12,20 @@ public class ReviewRepository {
 	Map<Long, Review> reviews = new HashMap<>();
 
 	public ReviewRepository() {
+		Review firstMovie = new Review(902L, "Identity", "Great thiller. Excellent ending.", "Review Category",
+				"Content", "/images/identity.jpg", "Synopsis", "James Mangold");
 		Review secondMovie = new Review(121L, "John Wick", "Best. Movie. Ever.", "Review Category", "Content",
-				"/images/john-wick.jpg");
-		Review thirdMovie = new Review(432L, "Texas Chainsaw Massacre", "Strange ending...needs reworking.", "Review Category", "Content",
-				"/images/texas-chainsaw-massacre.jpg");
+				"/images/john-wick.jpg", "Synopsis", "Chad Stahelski, David Leitch");
+		Review thirdMovie = new Review(432L, "Texas Chainsaw Massacre", "Strange ending...needs reworking.",
+				"Review Category", "Content", "/images/texas-chainsaw-massacre.jpg", "Synopsis", "Tobe Hooper");
 		Review fourthMovie = new Review(223L, "Silence of the Lambs", "Movie description", "Review Category", "Content",
-				"/images/silence-of-the-lambs.jpg");
-		Review firstMovie = new Review(902L, "Identity", "Great thiller. Excellent ending.", "Review Category", "Content",
-				"/images/identity.jpg");
+				"/images/silence-of-the-lambs.jpg", "Synopsis", "Jonathan Demme");
 		Review fifthMovie = new Review(400L, "Cube", "Movie description", "Review Category", "Content",
-				"/images/cube.jpg");
-		
+				"/images/cube.jpg",
+				"A group of prisoners find themselves trapped in a large, "
+						+ "menacing cube and must work together to escape. Will they ever solve the cube out?",
+				"Vincenzo Natali");
+
 		populateReviewMap(firstMovie, secondMovie, thirdMovie, fourthMovie, fifthMovie);
 	}
 

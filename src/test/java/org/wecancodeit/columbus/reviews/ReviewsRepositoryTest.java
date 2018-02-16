@@ -11,37 +11,39 @@ import org.junit.Test;
 public class ReviewsRepositoryTest {
 
 	private ReviewRepository underTest;
-	
+
 	private long firstReviewId = 100L;
-	private Review firstReview = new Review(firstReviewId, "First Review", "Description of Movie", null, null, null);
+	private Review firstReview = new Review(firstReviewId, "First Review", "Description of Movie", null, null, null,
+			null, null);
 
 	private long secondReviewId = 143L;
-	private Review secondReview = new Review(secondReviewId, "Second Review", "Description of Second Movie", null, null, null);
+	private Review secondReview = new Review(secondReviewId, "Second Review", "Description of Second Movie", null, null,
+			null, null, null);
 
 	@Test
 	public void shouldFindFirstReview() {
 		underTest = new ReviewRepository(firstReview);
-		
+
 		Review check = underTest.findReview(firstReviewId);
-		
+
 		assertThat(check, is(firstReview));
 	}
-	
+
 	@Test
 	public void shouldFindSecondReview() {
 		underTest = new ReviewRepository(firstReview, secondReview);
-		
+
 		Review check = underTest.findReview(secondReviewId);
-		
+
 		assertThat(check, is(secondReview));
 	}
-	
+
 	@Test
 	public void shouldFindAllReviews() {
 		underTest = new ReviewRepository(firstReview, secondReview);
-		
+
 		Collection<Review> check = underTest.findAllReviews();
-		
+
 		assertThat(check, containsInAnyOrder(firstReview, secondReview));
 	}
 }

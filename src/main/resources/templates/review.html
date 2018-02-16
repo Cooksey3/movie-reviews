@@ -14,9 +14,12 @@
 
 	<div th:each="review: ${reviews}">
 		<img th:src="${review.image}" style="width: 304px; height: 228px"></img>
+		<p th:text="|Movie: ${review.movieName}|"></p>
 		<p th:text="${review.reviewId}"></p>
-		<p th:text="${review.movieName}"></p>
-		<p th:text="${review.movieSummary}"></p>
+		<p th:text="|${review.movieSummary}|"></p>
+		<p th:text="${review.reviewCategory}"></p>
+		<p th:text="${review.content}"></p>
+		<p th:text="${review.synopsis}"></p>
 		<a href="http://localhost:8080/reviews">Back to home</a>
 	</div>
 
