@@ -8,18 +8,18 @@
 
 <body>
 
-	<header>
 		<h1>Movie</h1>
-	</header>
 
 	<div th:each="review: ${reviews}">
 		<img th:src="${review.image}" style="width: 304px; height: 228px"></img>
-		<p th:text="|Movie: ${review.movieName}|"></p>
-		<p th:text="${review.reviewId}"></p>
-		<p th:text="|${review.movieSummary}|"></p>
-		<p th:text="${review.reviewCategory}"></p>
-		<p th:text="${review.content}"></p>
-		<p th:text="${review.synopsis}"></p>
+		<ul>
+			<li><p th:text="|Movie: ${review.movieName}|"></p></li>
+			<li><p th:text="|Movie ID: ${review.reviewId}|"></p></li>
+			<li><p th:text="|Reviewer's Opinion: ${review.movieSummary}|"></p></li>
+			<li><p th:text="|Movie Genre: ${review.reviewCategory}|"></p></li>
+			<li><p th:text="|Movie Content: ${review.content}|"></p></li>
+			<li><p th:text="|Synopsis: ${review.synopsis}|"></p></li>
+		</ul>
 		<a href="http://localhost:8080/reviews">Back to home</a>
 	</div>
 
